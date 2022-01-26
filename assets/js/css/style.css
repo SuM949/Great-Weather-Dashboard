@@ -1,58 +1,122 @@
-/* header */
-#header {
-    color: white;
-}
-/* lists in current and forecast */
-ul { 
-    list-style-type: none;
-    padding-left: 0;
-}
-/* lists in current and forecast */
-li { 
-    font-size: 10pt;
-    padding: 5px 0px;
-}
-/* forecast column */
-.col { 
-    padding: 2px;
-}
-/* Current History Card */
-.card {
-    width: 100%;
-    background-color: #ececec;
-}
-/* Forecast History Card */
-.forecast-card {
-    color: white;
-    background-color:#0275d8;
-    border-radius: 5px;
-    font-size: 8pt;
-}
-/* search section styling */
-.search-section {
-    height: 100%;
-}
-/* city history sytling */
-.cityList {
-    border: solid;
-    border-width: thin;
-    border-radius: 5px;
-    margin: 5px;
-    padding-left: 2px;
-    background-color: lightgrey;
-}
-/* change color when hovering over history list */
-.cityList:hover {
-    background-color: #0275d8;
-    color: #fff;
+body {
+    height: 100vh;
 }
 
-/* five day card header */
-#fiveDayHeader {
-    margin-left: 10px;
-    margin-top: 10px;
+main {
+    height: 100%;
 }
-/* Overall Container */
-.container {
-    margin-top: 5px;
-  }
+
+header {
+    background-color: rgb(53, 50, 50);
+    padding: 1%;
+}
+
+header h1 {
+    color: white;
+    text-align: center;
+}
+
+#search-section {
+    padding: 20px;
+    border: 1px solid gainsboro;
+    height: 82vh;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+#search-field {
+    width: 70%;
+    border-radius: 5px;
+    border: 1px solid gainsboro;
+    padding: 10px 5px 10px 5px;
+}
+
+#search-button {
+    padding: 10px 5px 10px 5px;
+    border-radius: 5px;
+    border: 1px solid gainsboro;
+    background-color: rgb(55, 118, 170);
+    color: white;
+    width: 15%;
+}
+
+#search-button:hover {
+    transform: scale(1.05);
+    opacity: 50%;
+}
+
+#current-weather {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 20px;
+    padding: 0 20px 20px 20px;
+    height: 40vh;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+}
+
+#current-weather-header {
+    display: flex;
+    align-items: center;
+}
+
+#current-weather p {
+    font-size: 130%;
+}
+
+#uv-condition {
+    padding: 3px;
+    border-radius: 5px;
+    color: white;
+}
+
+#forecast-result {
+    border: 1px solid gainsboro;
+    margin-top: 20px;
+    border-radius: 5px;
+    padding: 20px;
+    height: 40vh;
+}
+
+#forecast-header h3 {
+    font-size: 130%;
+}
+
+#cards-container {
+    margin-top: 20px;
+    height: 80%;
+}
+
+.card {
+    width: 15%;
+    height: 100%;
+}
+
+.card img {
+    width: 50%;
+}
+
+.card p {
+    padding-left: 10px;
+}
+
+#past-search {
+    padding: 0;
+}
+
+#past-search li {
+    list-style-type: none;
+    background-color: white;
+    margin-top: 10px;
+    padding: 10px 5px 10px 5px;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+}
+
+#past-search li:hover {
+    transform: scale(1.05);
+    opacity: 50%;
+    font-weight: bold;
+    color: black;
+}
