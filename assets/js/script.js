@@ -69,7 +69,7 @@ function searchWeather(event) {
             windResult.textContent = 'Wind Speed: ' + cityWind + 'MPH';
             
            
-            var getUV = 'https://api.openweathermap.org/data/2.5/onecall?lat=' + cityLat + '&lon=' + cityLon + '&exclude=minutely,hourly,daily,alerts&appid=8b9474b76db97cf9c54177ce617e7e88';
+            var getUV = 'https://api.openweathermap.org/data/2.5/onecall?lat=' + cityLat + '&lon=' + cityLon + '&exclude=minutely,hourly,daily,alerts&appid=6dd1c3371becd65fd3d634e38ea6e1df';
 
              // get UV index
             fetch(getUV)
@@ -92,7 +92,7 @@ function searchWeather(event) {
                 })
         })
 
-        var forecastCall = 'https://api.openweathermap.org/data/2.5/forecast?q=' + searchCity + '&units=imperial&appid=8b9474b76db97cf9c54177ce617e7e88';
+        var forecastCall = 'https://api.openweathermap.org/data/2.5/forecast?q=' + searchCity + '&units=imperial&appid=6dd1c3371becd65fd3d634e38ea6e1df';
 
         // get 5 day forecast
         fetch(forecastCall)
@@ -177,7 +177,7 @@ function searchHistory(event) {
         console.log("You searched for " + searchAgain + " again!");
     }
 
-    var currentWeatherCall = 'https://api.openweathermap.org/data/2.5/weather?q=' + searchAgain + '&units=imperial&appid=8b9474b76db97cf9c54177ce617e7e88';
+    var currentWeatherCall = 'https://api.openweathermap.org/data/2.5/weather?q=' + searchAgain + '&units=imperial&appid=6dd1c3371becd65fd3d634e38ea6e1df';
 
     fetch(currentWeatherCall)
         .then(function (response) {
@@ -198,7 +198,7 @@ function searchHistory(event) {
             humidResult.textContent = 'Humidity: ' + cityHumid + '%';
             windResult.textContent = 'Wind Speed: ' + cityWind + 'MPH';
             
-            var getUV = 'https://api.openweathermap.org/data/2.5/onecall?lat=' + cityLat + '&lon=' + cityLon + '&exclude=minutely,hourly,daily,alerts&appid=8b9474b76db97cf9c54177ce617e7e88';
+            var getUV = 'https://api.openweathermap.org/data/2.5/onecall?lat=' + cityLat + '&lon=' + cityLon + '&exclude=minutely,hourly,daily,alerts&appid=6dd1c3371becd65fd3d634e38ea6e1df';
 
             fetch(getUV)
                 .then(function(response) {
@@ -219,7 +219,7 @@ function searchHistory(event) {
                 })
         })
 
-        var forecastCall = 'https://api.openweathermap.org/data/2.5/forecast?q=' + searchAgain + '&units=imperial&appid=8b9474b76db97cf9c54177ce617e7e88';
+        var forecastCall = 'https://api.openweathermap.org/data/2.5/forecast?q=' + searchAgain + '&units=imperial&appid=6dd1c3371becd65fd3d634e38ea6e1df';
 
         fetch(forecastCall)
         .then(function (response) {
