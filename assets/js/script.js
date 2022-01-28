@@ -14,7 +14,6 @@ var uvCondition = document.querySelector('#uv-condition');
 var searchCity;
 var searchAgain;
 
-
 var uvCall = 'https://api.openweathermap.org/data/2.5/uvi?lat=47.6062&lon=-122.3321&appid=6dd1c3371becd65fd3d634e38ea6e1df';
 
 // retrieving stored searches from localStorage and building list
@@ -68,7 +67,6 @@ function searchWeather(event) {
             humidResult.textContent = 'Humidity: ' + cityHumid + '%';
             windResult.textContent = 'Wind Speed: ' + cityWind + 'MPH';
             
-           
             var getUV = 'https://api.openweathermap.org/data/2.5/onecall?lat=' + cityLat + '&lon=' + cityLon + '&exclude=minutely,hourly,daily,alerts&appid=6dd1c3371becd65fd3d634e38ea6e1df';
 
              // get UV index
@@ -77,7 +75,6 @@ function searchWeather(event) {
                     return response.json();
                 })
                 .then(function (data) {
-                    console.log(data);
                     var cityUV = data.current.uvi;
                     uvCondition.textContent = cityUV;
 
